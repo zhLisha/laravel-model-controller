@@ -11,7 +11,7 @@
     <ul>
         @foreach ($movies as $movie)
             <li>
-                <a href="">{{$movie->title}}</a> 
+                <a href="{{ route('details', ['id' => $movie['id']]) }}">{{$movie->title}}</a> 
             </li>
         @endforeach
     </ul>

@@ -16,4 +16,14 @@ class HomeController extends Controller
 
         return view('home_movie', $data);
     }
+
+    public function details($id) {
+        $movieDetails = Movie::find($id);
+
+        $data = [
+            'details' => $movieDetails
+        ];
+
+        return view('movie_details', $data);
+    }
 }
